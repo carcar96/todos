@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/ >
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h1>我的Todo</h1>
+			<form>
+				<input type="text" placeholder="e.g. 下午记得买菜" id="val">
+				<input type="submit" value="submit" id="btn">
+			</form>
+			<div class="task-box">
+				<ul>
+					<!--<li>
+						<input type="checkbox">
+						<span>111111</span>
+						<a href="javascript:;">删除</a>
+						<a href="javascript:;">详细</a>
+					</li> -->
+				</ul>
+			</div>	
+				
+		</div>
+		<div class="detail_box">
+			<div class="detail">
+				<h3>title</h3>
+				<input type="text" placeholder="标题" class="modify">
+				<textarea rows="6" class="content"></textarea>	
+				<h4>提醒时间</h4>	
+				<input type="text" id="datetimepicker6">		
+				<input type="button" value="更新" class="reload">
+			</div>
+		</div>
+		<div class="warn-box">
+			<div class="dele">
+				<h2>确认删除？</h2>
+				<input type="button" value="确认" class="enter">
+				<input type="button" value="取消" class="back">
+			</div>
+		</div>
+		<div class="timeout">
+			<h3 class="closeAll">关闭全部</h3>
+		</div>
+	</div>
+	<video src="music/alert.mp3" style="display:none"></video>
+</body>
+<script src="lib/jquery.js"></script>
+<script src="lib/store2.js"></script>
+<script src="lib/jquery.datetimepicker.full.js"></script>
+<script src="js/index.js"></script>
+<script>
+  $.datetimepicker.setLocale('ch');
+  $('#datetimepicker6').datetimepicker();
+
+</script>
+</html>
